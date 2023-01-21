@@ -1,4 +1,4 @@
-package pageObjects;
+package base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -47,6 +47,9 @@ public class BasePage {
         WebElement target = driver.findElement(locator);
         actions.moveToElement(target).perform();
     }
+
+
+
 
     public String getText(By locator){
         return driver.findElement(locator).getText();

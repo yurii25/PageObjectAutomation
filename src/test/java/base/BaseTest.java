@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
+
+
     private WebDriver driver;
 
 
@@ -22,5 +24,13 @@ public class BaseTest {
 //        driver.close();
 //        driver.quit();
 //    }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
+    }
 
 }
