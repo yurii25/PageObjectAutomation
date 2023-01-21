@@ -57,7 +57,7 @@ public class FavoriteProductAndVerifyIfFavored extends BasePage {
 
         Assert.assertEquals(actualProductName, expectedProductName);
     }
-
+// .,l
 
 //    @Test
 //    public void FavoriteProductAndReviewIfFavoredTest100(){
