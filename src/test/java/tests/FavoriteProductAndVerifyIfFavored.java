@@ -2,12 +2,11 @@ package tests;
 
 import base.BasePage;
 import base.BaseTest;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.AddToWishlist;
-import pageObjects.TheNameOfTheProductIsInTheWishlist;
+import pageObjects.GetProductNameFromWishlist;
 
 public class FavoriteProductAndVerifyIfFavored extends BaseTest {
 
@@ -17,7 +16,7 @@ public class FavoriteProductAndVerifyIfFavored extends BaseTest {
 
         AddToWishlist addToWishlist = new AddToWishlist(getDriver());
         BasePage basePage = new BasePage(getDriver());
-        TheNameOfTheProductIsInTheWishlist name = new TheNameOfTheProductIsInTheWishlist(getDriver());
+        GetProductNameFromWishlist name = new GetProductNameFromWishlist(getDriver());
 
         basePage.goToHomePage();
 

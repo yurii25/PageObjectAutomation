@@ -19,11 +19,11 @@ public class BaseTest {
         driver = new ChromeDriver();
     }
 
-//    @AfterMethod
-//    public void closeDriver(){
-//        driver.close();
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void closeDriver(){
+        driver.close();
+        driver.quit();
+    }
 
     public WebDriver getDriver() {
         return driver;

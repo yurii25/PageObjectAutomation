@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -46,6 +47,11 @@ public class BasePage {
         Actions actions = new Actions(driver);
         WebElement target = driver.findElement(locator);
         actions.moveToElement(target).perform();
+    }
+
+    public void selectDropdownOption(By dropdownLocator, String option ){
+        Select select = new Select(driver.findElement(dropdownLocator));
+        select.selectByValue(option);
     }
 
 

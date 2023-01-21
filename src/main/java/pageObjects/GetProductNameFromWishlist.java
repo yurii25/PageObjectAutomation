@@ -4,9 +4,9 @@ import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class TheNameOfTheProductIsInTheWishlist extends BasePage {
+public class GetProductNameFromWishlist extends BasePage {
 
-    public TheNameOfTheProductIsInTheWishlist(WebDriver driver) {
+    public GetProductNameFromWishlist(WebDriver driver) {
         super(driver);
     }
 
