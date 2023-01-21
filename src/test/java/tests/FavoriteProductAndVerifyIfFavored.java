@@ -19,29 +19,21 @@ public class FavoriteProductAndVerifyIfFavored extends BaseTest {
         BasePage basePage = new BasePage(getDriver());
         TheNameOfTheProductIsInTheWishlist name = new TheNameOfTheProductIsInTheWishlist(getDriver());
 
-        getDriver();
         basePage.goToHomePage();
+
 
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("window.scrollBy(0,1700)");
 
+
         addToWishlist.likeTheProduct();
 
-        ////////////////////////////
-
-//
-//        basePage.clickByLocator(By.cssSelector("[href='https://shop.demoqa.com/wishlist/']"));
-
-
-//        js.executeScript("window.scrollBy(0,500)");
 
         String actualProductName = name.productName();
         String expectedProductName = "TOKYO TALKIES";
 
-
-
-        System.out.println("Actual result: " + actualProductName);
-        System.out.println("Expected result: " + expectedProductName);
+//        System.out.println("Actual result: " + actualProductName);
+//        System.out.println("Expected result: " + expectedProductName);
 
         Assert.assertEquals(actualProductName, expectedProductName);
     }
