@@ -26,6 +26,7 @@ public class VerifyAddingProductToCart extends BaseTest {
 
         addProductToCart.addToCart();
         addProductToCart.goToCart();
+        addProductToCart.goToCart();
 
 
         String actualProductName = name.productName();
