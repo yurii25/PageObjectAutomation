@@ -15,10 +15,9 @@ public class FavoriteProductAndVerifyIfFavored extends BaseTest {
     public void FavoriteProductAndVerifyIfFavoredTest(){
 
         AddToWishlist addToWishlist = new AddToWishlist(getDriver());
-        BasePage basePage = new BasePage(getDriver());
         GetProductNameFromWishlist name = new GetProductNameFromWishlist(getDriver());
 
-        basePage.goToHomePage();
+        getDriver().get("https://shop.demoqa.com/");
 
 
         JavascriptExecutor js = (JavascriptExecutor) getDriver();

@@ -6,14 +6,17 @@ import org.openqa.selenium.WebDriver;
 
 public class GetProductNameFromWishlist extends BasePage {
 
+    private final By wishlist = By.cssSelector("[href='https://shop.demoqa.com/wishlist/']");
+    private final By productNameInWishlist = By.xpath("//a[normalize-space()='Tokyo Talkies']");
+
     public GetProductNameFromWishlist(WebDriver driver) {
         super(driver);
     }
 
     public String productName() {
 
-        clickByLocator(By.cssSelector("[href='https://shop.demoqa.com/wishlist/']"));
+        clickByLocator(wishlist);
 
-        return getText(By.xpath("//a[normalize-space()='Tokyo Talkies']"));
+        return getText(productNameInWishlist);
     }
 }

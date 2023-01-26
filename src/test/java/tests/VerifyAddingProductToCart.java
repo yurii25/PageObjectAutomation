@@ -5,6 +5,7 @@ import base.BaseTest;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageObjects.AddProductToCart;
 import pageObjects.GetProductNameFromCart;
 
 
@@ -12,21 +13,19 @@ public class VerifyAddingProductToCart extends BaseTest {
 
     @Test
     public void VerifyAddingProductToCartTest(){
-        BasePage basePage = new BasePage(getDriver());
+
+        AddProductToCart addProductToCart = new AddProductToCart(getDriver());
         GetProductNameFromCart name = new GetProductNameFromCart(getDriver());
 
-        basePage.goToHomePage();
+        getDriver().get("https://shop.demoqa.com/");
 
-        basePage.clickByLocator(By.xpath("//h3/a[contains(@href, 'pink-drop')]"));
+        addProductToCart.clickOnTheProduct();
 
+        addProductToCart.selectColor();
+        addProductToCart.selectSize();
 
-        basePage.selectDropdownOption(By.id("pa_color"), "pink");
-
-        basePage.selectDropdownOption(By.id("pa_size"), "37");
-
-        basePage.clickByLocator(By.xpath("//button[@type='submit'] [(contains (@class,'cart'))]"));
-
-        basePage.clickByLocator(new By.ByCssSelector("span[class='cart-item has-items']"));
+        addProductToCart.addToCart();
+        addProductToCart.goToCart();
 
 
         String actualProductName = name.productName();

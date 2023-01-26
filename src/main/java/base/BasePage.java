@@ -19,10 +19,6 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public void goToHomePage(){
-        driver.get("https://shop.demoqa.com/");
-    }
-
     public WebElement getWebElement(By locator){
         return driver.findElement(locator);
     }

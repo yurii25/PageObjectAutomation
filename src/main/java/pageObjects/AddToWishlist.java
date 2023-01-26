@@ -3,26 +3,26 @@ package pageObjects;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class AddToWishlist extends BasePage {
+
+
+    private final By productToMoveMouseOverOn = By.cssSelector("[href*='tokyo-talkies'] [class='second-img']");
+    private final By heartIcon = By.cssSelector("a[data-product-id='704']");
+    private final By productAddedToTheWishlistPop_up = By.cssSelector("[id='yith-wcwl-message']");
+
 
     public AddToWishlist(WebDriver driver) {
         super(driver);
     }
 
     public void likeTheProduct() {
-        moveMouseOverTheElement(By.cssSelector("[href*='tokyo-talkies'] [class='second-img']"));
+        moveMouseOverTheElement(productToMoveMouseOverOn);
 
-        isElementDisplayed(By.cssSelector("a[data-product-id='704']"));
-        clickByLocator(By.cssSelector("a[data-product-id='704']"));
+        isElementDisplayed(heartIcon);
+        clickByLocator(heartIcon);
 
-        isElementDisplayed(By.cssSelector("[id='yith-wcwl-message']"));
+        isElementDisplayed(productAddedToTheWishlistPop_up);
 
     }
 
