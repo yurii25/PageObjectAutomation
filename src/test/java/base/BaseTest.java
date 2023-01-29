@@ -40,7 +40,6 @@ public class BaseTest {
     @AfterMethod( alwaysRun = true)
     public void driverQuit(ITestResult iTestResult){
         if(iTestResult.getStatus()==ITestResult.FAILURE){
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
             saveScreenshotPNG();
         }
         if(driver!=null) {
