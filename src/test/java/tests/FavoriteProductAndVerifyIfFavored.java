@@ -2,6 +2,7 @@ package tests;
 
 import base.BasePage;
 import base.BaseTest;
+import io.qameta.allure.Step;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,6 +14,8 @@ public class FavoriteProductAndVerifyIfFavored extends BaseTest {
 
     @Test
     public void FavoriteProductAndVerifyIfFavoredTest(){
+
+        allureLog("Favoring the product and verifying if it is displayed on the wishlist page");
 
         AddToWishlist addToWishlist = new AddToWishlist(getDriver());
         GetProductNameFromWishlist name = new GetProductNameFromWishlist(getDriver());

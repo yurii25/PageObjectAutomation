@@ -1,6 +1,9 @@
 package pageObjects;
 
 import base.BasePage;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,6 +16,7 @@ public class GetProductNameFromWishlist extends BasePage {
         super(driver);
     }
 
+    @Description("Get product name in Wishlist")
     public String productName() {
 
         clickByLocator(wishlist);

@@ -14,6 +14,8 @@ public class VerifyAddingProductToCart extends BaseTest {
     @Test
     public void VerifyAddingProductToCartTest(){
 
+        allureLog("Adding the product to the cart and verifying if it is displayed there");
+
         AddProductToCart addProductToCart = new AddProductToCart(getDriver());
         GetProductNameFromCart name = new GetProductNameFromCart(getDriver());
 
