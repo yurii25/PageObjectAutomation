@@ -17,7 +17,7 @@ public class AddProductToCart extends BasePage {
     private final By colorId = By.id("pa_color");
     private final String colorValue = "pink";
     private final By sizeId = By.id("pa_size");
-    private final String sizeValue = "45";  // should be 37 to pass
+    private final String sizeValue = "37";  // should be 37 to pass
     private final By addToCart = By.xpath("//button[@type='submit'] [(contains (@class,'cart'))]");
     private final By cart = By.cssSelector("span[class='cart-item has-items']"); //   By.ByCssSelector("span[class='cart-item has-items']")
 
