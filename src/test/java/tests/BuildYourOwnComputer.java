@@ -31,7 +31,7 @@ public class BuildYourOwnComputer {
         $(By.xpath("(//a[@href='/cart'])[1]")).shouldHave(visible).click();
 
         $(By.xpath("//td/div [@class='attributes']")).shouldHave(text("HDD: 320 GB"), text("RAM: 2 GB"));
-                                                                                                     // "8GB [+$60.00]" to pass
+                                                                                                     // "8GB [+$60.00]" to Pass
 
     }
 }
